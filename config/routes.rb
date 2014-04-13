@@ -1,4 +1,5 @@
 Powermoto::Application.routes.draw do
+  
   resources :line_items
 
   resources :carts
@@ -7,7 +8,7 @@ Powermoto::Application.routes.draw do
 
   controller :store do
   
-  
+    get 'shop' => :shop
     get 'contact' => :contact
     get 'order' => :order
     get 'faq' => :faq
