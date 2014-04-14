@@ -1,5 +1,5 @@
 atom_feed do |feed|
-	feed.title "Who bough #{@product.title}"
+	feed.title "Who bought #{@product.title}"
 
 	feed.updated @latest_order.try(:updated_at)
 
@@ -24,15 +24,15 @@ atom_feed do |feed|
 					xhtml.tr do
 						xhtml.th 'total', colspan: 2
 						xhtml.th number_to_currency \
-							order.line_items.map(&:total_price).summ
-						end
+						order.line_items.map(&:total_price).summ
 					end
+				end
 					xhtml.p "Paid by #{order.pay_type}"
-				end
-				entry.author do |author|
-					author.name order.name
-					author.email order.email
-				end
+			end
+			entry.author do |author|
+				author.name order.name
+				author.email order.email
 			end
 		end
 	end
+end
