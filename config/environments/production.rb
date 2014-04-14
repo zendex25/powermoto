@@ -17,15 +17,14 @@ Powermoto::Application.configure do
   config.action_mailer.delivery_method = :smtp
 
   config.action_mailer.smtp_settings = {
-    address: "smtp.gmail.com",
-    port: 587,
+    address: "smtp.mail.yahoo.com",
+    port: 465,
     domain: "powermoto.herokuapp.com",
     authentication: "plain",
-    user_name: "admin",
-    password: "admin",
-    enable_starttls_auto: true
+    user_name: "zendex25",
+    password: "Cabinet1sd2sd3sd",
   }
-  
+
   # Enable Rack::Cache to put a simple HTTP cache in front of your application
   # Add `rack-cache` to your Gemfile before enabling this.
   # For large-scale production use, consider using a caching reverse proxy like nginx, varnish or squid.
