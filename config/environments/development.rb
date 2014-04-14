@@ -21,8 +21,8 @@ Powermoto::Application.configure do
     port: 465,
     domain: "powermoto.herokuapp.com",
     authentication: "plain",
-    user_name: "zendex25",
-    password: "Cabinet1sd2sd3sd",
+    user_name: "admin",
+    password: "admin",
   }
 
   config.action_mailer.raise_delivery_errors = false

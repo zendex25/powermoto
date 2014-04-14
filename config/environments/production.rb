@@ -21,8 +21,8 @@ Powermoto::Application.configure do
     port: 465,
     domain: "powermoto.herokuapp.com",
     authentication: "plain",
-    user_name: "zendex25",
-    password: "Cabinet1sd2sd3sd",
+    user_name: "admin",
+    password: "admin",
   }
 
   # Enable Rack::Cache to put a simple HTTP cache in front of your application
