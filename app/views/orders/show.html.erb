@@ -6,38 +6,27 @@
   <strong>Name:</strong>
   <%= @order.name %>
 </p>
-
+<br>
 <p>
   <strong>Address:</strong>
   <%= @order.address %>
 </p>
-
+<br>
 <p>
   <strong>Email:</strong>
   <%= @order.email %>
 </p>
-
+<br>
+<strong>Product:</strong>
 <% @order.line_items.each do |item| %>
 	<p>
-	  <strong>Product:</strong>
-	  <%= item.product.title %>
-	</p>
-	<p>
-	  <strong>Quantity:</strong>
-	  <%= item.quantity %>
-	</p>
-	<p>
-	  <strong>Total Price:</strong>
-	  <%= item.total_price %>
+	  <%= item.quantity %>x <%= item.product.title %> (<%= item.quantity %> x <%= item.product.price %> = <%= item.total_price %>)
 	</p>
 <% end %>
-
+<br>
 <p>
   <strong>Total:</strong>
   <%= @order.line_items.map(&:total_price).sum %>
 </p>
 
-<p>
-  <strong>Pay type:</strong>
-  <%= @order.pay_type %>
-</p>
+
