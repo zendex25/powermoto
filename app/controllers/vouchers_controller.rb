@@ -1,5 +1,9 @@
 class VouchersController < ApplicationController
-    skip_before_action :authorize, only: [:create, :update, :destroy]
+    skip_before_action :authorize, only: [:new, :create]
+
+    include CurrentOrder
+    before_action :set_order, only: [:new, :create]
+    before_action :set_voucher, only: [:show, :edit, :update, :destroy]
 
   # GET /vouchers
   # GET /vouchers.json
@@ -25,10 +29,13 @@ class VouchersController < ApplicationController
   # POST /vouchers.json
   def create
     @voucher = Voucher.new(voucher_params)
+    @voucer.add_line_items_from_order(@order)
 
     respond_to do |format|
       if @voucher.save
-        format.html { redirect_to @voucher, notice: 'Voucher was successfully created.' }
+        session[:order_id] = nil
+
+        format.html { redirect_to store_url, notice: 'Voucher was successfully created.' }
         format.json { render action: 'show', status: :created, location: @voucher }
       else
         format.html { render action: 'new' }
