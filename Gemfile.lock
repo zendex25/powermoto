@@ -68,7 +68,6 @@ GEM
     minitest (4.7.5)
     multi_json (1.9.2)
     netrc (0.7.7)
-    pdfkit (0.6.2)
     pg (0.17.1-x86-mingw32)
     polyglot (0.3.4)
     rack (1.5.2)
@@ -143,7 +142,6 @@ DEPENDENCIES
   heroku
   jbuilder (~> 1.2)
   jquery-rails
-  pdfkit
   pg
   rails (= 4.0.4)
   rails_12factor

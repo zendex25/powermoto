@@ -1,5 +1,7 @@
 Powermoto::Application.routes.draw do
   
+  resources :vouchers
+
   get 'admin' => 'admin#index'
   controller :sessions do
     get 'login' => :new

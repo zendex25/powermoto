@@ -2,7 +2,9 @@ class LineItemsController < ApplicationController
   skip_before_action :authorize, only: :create
 
   include CurrentCart
+
   before_action :set_cart, only: [:create]
+  
   before_action :set_line_item, only: [:show, :edit, :update, :destroy]
 
   # GET /line_items
@@ -30,6 +32,7 @@ class LineItemsController < ApplicationController
   def create
     product = Product.find(params[:product_id])
     @line_item = @cart.add_product(product.id)
+    
 
     respond_to do |format|
       if @line_item.save
