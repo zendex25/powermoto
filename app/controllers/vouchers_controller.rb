@@ -9,6 +9,7 @@ class VouchersController < ApplicationController
   # GET /vouchers.json
   def index
     @vouchers = Voucher.all
+    
   end
 
   # GET /vouchers/1
