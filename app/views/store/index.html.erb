@@ -2,59 +2,36 @@
 <p id="notice"><%= notice %></p>
 <% end %>
 
-      
+      <% @fronts.each do |front| %>
       <div class="line">
         <div id="owl-demo" class="owl-carousel owl-theme  margin-bottom">
-          <div class="item"><img src="img/1.jpg" alt=""></div>
-          <div class="item"><img src="img/2.jpg" alt=""></div>
-          <div class="item"><img src="img/3.jpg" alt=""></div>
-          <div class="item"><img src="img/4.jpg" alt=""></div>
-          <div class="item"><img src="img/5.jpg" alt=""></div>
+          <div class="item"><%= image_tag(front.img1) %></div>
+          <div class="item"><%= image_tag(front.img2) %></div>
+          <div class="item"><%= image_tag(front.img3) %></div>
         </div> 
       </div>
       
       <div class="line">
         <div class="margin">
           <div class="s-12 l-4 margin-bottom">
-            <div class="box">
+            <div class="front">
               <h2>About</h2>
-              <p align="justify">Due to the painstaking effort, dedication and expertise of the Owner, the company, apart from selling its items on retail and on wholesale, it is now directly established its partnership/collaboration with direct importers and direct distributors to offer its merchandise in a very competitive price.  Since the Owners are very much experienced in the area of E-Commerce/E-Marketing here and abroad since 1998, they kicked-off their on-line presence in 2013 to pave the way for the on-line buyers nationwide who wish to arrange their transaction through the internet. </p>
-              <br>
-              <p align="justify">Our Mission:  “To continuously sell and deliver high quality authentic products and services to meet and sustain our customers’ requirements”</p>
-              <br>
-              <p align="justify">Our Vision:  To be the company of choice in providing high quality products and services to Valued Customers and Clients at competitive price at the same time valuing the welfare and development if its personnel.</p>
-              <br>
-              <p align="justify">The company also aims to maximize the contribution of technology to further increase its online presence by selling its items through auction, marketing and social media sites.</p>
+              <%= front.about.html_safe %>
             </div>
           </div>
           <div class="s-12 l-4 margin-bottom">
-            <div class="box">
+            <div class="front">
               <h2>Company</h2>
-              <p align="justify">Powermoto Motorshop, a trading organization established in February 2010 by its founder, Ditas and Ronald Camballa with the initial purpose of selling on retail high quality imported and local authentic products of motorcycle parts and accessories, oils and lubricants and other established products relative to all models of motorcycles and tricycles.  Due to the experience and background of the proprietors in the area of marketing and management, the company is now running its four company-owned stores and two satellite offices within the area of Pasig City.</p>
+              <%= front.company.html_safe %>
               <br>
               <h2>Like Us on FB!</h2>
               <p><div class="fb-like" data-href="https://www.facebook.com/pages/Powermoto-Motorshop/201230659904144" data-width="240" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div></p>
             </div>
           </div>
           <div class="s-12 l-4 margin-bottom">
-            <div class="box">
+            <div class="front">
               <h2>Services</h2>
-              <p align="justify">Our Services are “highly-dedicated” to produce good quality and exemplary services in meeting our Valued Clients’ needs and requirements.</p>
-
-              <ul>
-                <li>Tune-up (Overhaul/General or Carburator Only)</li>
-                <li>Modification / Conversion (machine, parts, accessories and other aspects)</li>
-                <li>Fine-tuning</li>
-                <li>Motor Upgrade (Machine)</li>
-                <li>Change-oil</li>
-                <li>Calibration</li>
-                <li>Rebore</li>
-                <li>Electrical</li>
-                <li>Alignment</li>
-                <li>Tire-Changing</li>
-                <li>Parts and Accessories Installation</li>
-                <li>Etc.</li>
-              </ul>
+              <%= front.services.html_safe %>
             </div>
 
           </div>
@@ -62,8 +39,10 @@
       </div>
       <div class="line">
         <div class="margin">
-          <div class="box">
-            <center><img src="img/dealer.png"></center>
+          <div class="dealer">
+
+            <center><%= image_tag(front.dealer) %></center>
           </div>
         </div>
       </div>
+      <% end %>

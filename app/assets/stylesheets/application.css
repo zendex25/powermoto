@@ -869,6 +869,24 @@ border-top: 1px solid #595;
   min-height: 100px;
 }
 
+.item img {
+  width: 940px;
+}
+
+.front {
+  background: none repeat scroll 0 0 #c5c5c5;
+  display: table;
+  padding: 1.25em;
+  height: 870px;
+}
+
+.dealer img {
+  width: 940px;
+    background: none repeat scroll 0 0 #c5c5c5;
+  display: table;
+  padding: 1.25em;
+}
+
 .store .entry img {
   width: 80px;
   margin-right: 5px;

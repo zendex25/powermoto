@@ -1,0 +1,31 @@
+<h1>Edit your homepage!</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>About</th>
+      <th>Company</th>
+      <th>Services</th>
+      
+      
+      <th></th>
+      
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fronts.each do |front| %>
+      <tr>
+        
+        <td><%= front.about %></td>
+        <td><%= front.company %></td>
+        <td><%= front.services %></td>
+        
+        
+        <td><%= link_to 'Edit', edit_front_path(front) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

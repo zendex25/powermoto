@@ -2,6 +2,8 @@ Powermoto::Application.routes.draw do
   
   
 
+
+
   get 'admin' => 'admin#index'
   controller :sessions do
     get 'login' => :new
@@ -21,12 +23,14 @@ Powermoto::Application.routes.draw do
   resources :products do
     get :who_bought, on: :member
   end
+  resources :fronts
 
   controller :store do
     get 'shop' => :shop
     get 'contact' => :contact
     get 'order' => :order
     get 'faq' => :faq
+    get 'front' => :front
   end
 
   

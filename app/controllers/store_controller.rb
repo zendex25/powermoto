@@ -6,7 +6,7 @@ class StoreController < ApplicationController
 
 
   def index
-  	
+  	@fronts = Front.all
   end
 
   def contact
@@ -20,6 +20,7 @@ class StoreController < ApplicationController
 
   def shop
     @products = Product.order(:title)
+
   end
 
 end
