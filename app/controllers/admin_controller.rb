@@ -3,4 +3,6 @@ class AdminController < ApplicationController
   	@total_orders = Order.count
   	@supports = Support.all
   end
+
+
 end

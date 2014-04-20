@@ -1,5 +1,7 @@
 class SupportsController < ApplicationController
-  skip_before_action :authorize
+    skip_before_action :authorize
+
+  before_action :set_support, only: [:show, :edit, :update, :destroy]
 
   # GET /supports
   # GET /supports.json
@@ -42,7 +44,7 @@ class SupportsController < ApplicationController
   def update
     respond_to do |format|
       if @support.update(support_params)
-        format.html { redirect_to @support, notice: 'Support was successfully updated.' }
+        format.html { redirect_to store_url, notice: 'Support was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
