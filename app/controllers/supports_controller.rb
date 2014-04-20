@@ -1,5 +1,5 @@
 class SupportsController < ApplicationController
-  skip_before_action :authorize, only: [:create, :update, :destroy]
+  skip_before_action :authorize
 
   # GET /supports
   # GET /supports.json
