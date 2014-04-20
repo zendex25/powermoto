@@ -2,9 +2,7 @@ class LineItemsController < ApplicationController
   skip_before_action :authorize, only: :create
 
   include CurrentCart
-
   before_action :set_cart, only: [:create]
-  
   before_action :set_line_item, only: [:show, :edit, :update, :destroy]
 
   # GET /line_items
@@ -33,10 +31,9 @@ class LineItemsController < ApplicationController
     product = Product.find(params[:product_id])
     @line_item = @cart.add_product(product.id)
     
-
     respond_to do |format|
       if @line_item.save
-        format.html { redirect_to shop_store_url, notice: 'Line item was successfully created.' }
+        format.html { redirect_to shop_store_url }
         format.js
         format.json { render action: 'show', status: :created, location: @line_item }
       else
@@ -78,6 +75,6 @@ class LineItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def line_item_params
-      params.require(:line_item).permit(:product_id, :cart_id)
+      params.require(:line_item).permit(:product_id)
     end
 end

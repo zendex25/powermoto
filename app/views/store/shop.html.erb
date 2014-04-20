@@ -3,12 +3,19 @@
 <p>All our products are Absolutely Authentic and are directly imported from different countries with the necessary Quality Accreditation Certificates to assure the products’ durability and high-quality.</p>
 <br>
 
-<div id="cart">
+<div id="cart"
+	<% if @cart.line_items.empty? %>
+	style="display: none"
+	<% end %>
+	>
 <%= render @cart %>
 </div>
+
 <% if notice %>
 <p id="notice"><%= notice %></p>
 <% end %>
+
+
 <% @products.each do |product| %>
 <div class="entry">
 <%= image_tag(product.image_url) %>

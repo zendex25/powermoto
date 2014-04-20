@@ -7,6 +7,7 @@ class StoreController < ApplicationController
 
   def index
   	@fronts = Front.all
+
   end
 
   def contact

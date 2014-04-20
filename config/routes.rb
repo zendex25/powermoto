@@ -17,7 +17,6 @@ Powermoto::Application.routes.draw do
   resources :orders
   resources :line_items
   resources :carts
-  resources :vouchers
 
   get "store/index"
   resources :products do
