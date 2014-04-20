@@ -29,6 +29,13 @@ Powermoto::Application.routes.draw do
 
   controller :store do
     get 'shop' => :shop
+    get 'tire' => :tire
+    get 'helmet' => :helmet
+    get 'part' => :part
+    get 'accessory' => :accessory
+    get 'battery' => :battery
+    get 'oillube' => :oillube
+    get 'other' => :other
     get 'contact' => :contact
     get 'order' => :order
     get 'faq' => :faq

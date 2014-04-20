@@ -32,6 +32,12 @@
     <%= f.select :pay_type, Order::PAYMENT_TYPES,
                       prompt: 'Select a payment method' %>
   </div>
+  <% if session[:user_id] %>
+  <div class="field">
+    <%= f.label :paid %><br>
+    <%= f.select :paid, [['No'], ['Yes']] %>
+  </div>
+  <% end %>
   <div class="actions">
     <%= f.submit 'Place Order' %>
   </div>

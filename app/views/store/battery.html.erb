@@ -1,0 +1,26 @@
+<div class="store">
+<h1>Our Products</h1>
+<p>All our products are Absolutely Authentic and are directly imported from different countries with the necessary Quality Accreditation Certificates to assure the products’ durability and high-quality.</p>
+<br>
+
+<div id="cart">
+<%= render @cart %>
+</div>
+
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+<br>
+<h1>Batteries</h1>
+<% @products.each do |product| %>
+<div class="entry">
+<%= image_tag(product.image_url) %>
+<h3><%= product.title %></h3>
+<div class="price_line">
+<%= product.description %><br>
+<span class="price">P <%= product.price %></span>
+<%= button_to 'Add to Cart', line_items_path(product_id: product), remote: true %>
+</div>
+</div>
+<% end %>
+</div>
