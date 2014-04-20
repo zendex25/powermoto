@@ -10,8 +10,7 @@ class StoreController < ApplicationController
 
   end
 
-  def contact
-  end
+  
 
   def order
   end

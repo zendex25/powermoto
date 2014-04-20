@@ -4,6 +4,8 @@ Powermoto::Application.routes.draw do
 
 
 
+  
+
   get 'admin' => 'admin#index'
   controller :sessions do
     get 'login' => :new
@@ -17,6 +19,7 @@ Powermoto::Application.routes.draw do
   resources :orders
   resources :line_items
   resources :carts
+  resources :supports
 
   get "store/index"
   resources :products do

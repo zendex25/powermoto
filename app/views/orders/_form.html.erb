@@ -24,6 +24,10 @@
     <%= f.email_field :email, size: 40 %>
   </div>
   <div class="field">
+    <%= f.label :contact %><br>
+    <%= f.text_field :contact, size: 40 %>
+  </div>
+  <div class="field">
     <%= f.label :pay_type %><br>
     <%= f.select :pay_type, Order::PAYMENT_TYPES,
                       prompt: 'Select a payment method' %>

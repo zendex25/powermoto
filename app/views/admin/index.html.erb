@@ -1,5 +1,33 @@
 <h1>Welcome</h1>
  It's <%= Time.now %>
  We have <%= pluralize(@total_orders, "order") %>.
+<br><br>
+ <h1>Support Tickets</h1>
 
- 
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Contact</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @supports.each do |support| %>
+      <tr>
+        <td><%= support.name %></td>
+        <td><%= support.email %></td>
+        <td><%= support.contact %></td>
+        <td><%= link_to 'Show', support %></td>
+        <td><%= link_to 'Edit', edit_support_path(support) %></td>
+        <td><%= link_to 'Destroy', support, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
