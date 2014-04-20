@@ -1,4 +1,5 @@
 class CartsController < ApplicationController
+  before_filter :set_cart,  only: [:show, :destroy,  :edit, :update]
   skip_before_action :authorize, only: [:create, :update, :destroy]
   rescue_from ActiveRecord::RecordNotFound, with: :invalid_cart
   # GET /carts
@@ -61,6 +62,7 @@ class CartsController < ApplicationController
   end
 
   private
+
     # Use callbacks to share common setup or constraints between actions.
     def set_cart
       @cart = Cart.find(params[:id])
