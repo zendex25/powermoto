@@ -12,30 +12,37 @@ class StoreController < ApplicationController
 
 
   def tire
+    @fronts = Front.all
     @products = Product.where(:category => 'Tire')
   end
 
   def helmet
+    @fronts = Front.all
     @products = Product.where(:category => 'Helmet')
   end
 
   def part
+    @fronts = Front.all
     @products = Product.where(:category => 'Part')
   end
 
   def accessory
+    @fronts = Front.all
     @products = Product.where(:category => 'Accessory')
   end
 
   def battery
+    @fronts = Front.all
     @products = Product.where(:category => 'Battery')
   end
 
   def oillube
+    @fronts = Front.all
     @products = Product.where(:category => 'Oil/Lube')
   end
 
   def other
+    @fronts = Front.all
     @products = Product.where(:category => 'Other')
   end
 
