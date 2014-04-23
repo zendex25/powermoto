@@ -11,6 +11,6 @@ class AddCategoriesToFronts < ActiveRecord::Migration
   	add_column :fronts, :shop, :text
   	add_column :fronts, :how, :text
 	add_column :fronts, :contact, :text
-  	add_column :fronts, :store_loc, :string
+  	add_column :fronts, :store_loc, :text
   end
 end
