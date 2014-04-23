@@ -48,10 +48,10 @@ ActiveRecord::Schema.define(version: 20140420120110) do
     t.text     "address"
     t.string   "email"
     t.string   "pay_type"
-    t.datetime "created_at"
-    t.datetime "updated_at"
     t.string   "contact"
     t.string   "paid"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "products", force: true do |t|
