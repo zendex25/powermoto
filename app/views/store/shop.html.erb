@@ -1,6 +1,8 @@
 <div class="store">
 <h1>Our Products</h1>
-<p>All our products are Absolutely Authentic and are directly imported from different countries with the necessary Quality Accreditation Certificates to assure the products’ durability and high-quality.</p>
+<% @fronts.each do |front| %>
+<%= front.shop.html_safe %>
+<% end %>
 <br>
 
 <div id="cart">
@@ -14,7 +16,7 @@
 <br>
 <% @products.each do |product| %>
 <div class="entry">
-<%= image_tag(product.image_url) %>
+<%= link_to image_tag(product.image_url), product.image_url %>
 <h3><%= product.title %></h3>
 <div class="price_line">
 <%= product.description %><br>

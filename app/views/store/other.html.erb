@@ -1,6 +1,8 @@
 <div class="store">
 <h1>Our Products</h1>
-<p>All our products are Absolutely Authentic and are directly imported from different countries with the necessary Quality Accreditation Certificates to assure the products’ durability and high-quality.</p>
+<% @fronts.each do |front| %>
+<%= front.shop.html_safe %>
+<% end %>
 <br>
 
 <div id="cart">

@@ -4,30 +4,14 @@
 
 <div class="line">
   <h1>Contact Us</h1>
-<p>Website issues? We can help! Answer Desk is ready to help you with whatever you need:</p>
+<% @fronts.each do |front| %>
+<%= front.contact.html_safe %>
+<% end %>
   <a href="/supports/new"><div style="color: blue;"><u>Get support!</u></div></a>
 
 <br>
   <h1>Store Locations</h1>
-  <ul>
-    <li>Main Office – Chavez Bldg., Lot 19, F. Manalo St., Teodora Compound, Bambang, Pasig City<br>
-      <blockquote>Contact Number: (Landline) 02-661-3926 / 02-664-4731<br>
-(Mobile) +63915-804-1520 / +63935-880-0239<br>
- (Email) satid2000@gmail.com, powermoto2013@gmail.com</blockquote></li>
-<br>
- <li>Branch Office – 1081 Corner F. Antonio & F. Manalo St., Bambang, Pasig City (in front of Eastern Gas Station)
-<br>Contact Number: (Landline) 02-984-1355 (pldt) / 956-4592 (globe landline)</li>
-<br>
-<li>Store 1 – L5, F. Antonio Avenue, Bambang, Pasig City (almost beside Eastern Gas Station)</li>
-<br>
-<li>Store 2 – 1081 Corner F. Antonio & F. Manalo St., Bambang, Pasig City (in front of Eastern Gas Station)
-<br>Contact Number: (Landline) 02-984-1355</li>
-<br>
-<li>Store 3 – 62 A. Luna St., Malinao, Pasig City Metro Manila
- <br>Contact Number: (Landline) 02-985-8235</li>
-
-  </ul>
-
-  <br>
-  <img src="img/map.png" width="940px">
+<% @fronts.each do |front| %>
+<%= front.store_loc.html_safe %>
+<% end %>
 </div>

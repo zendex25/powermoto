@@ -4,5 +4,7 @@
 
 <div class="line">
 <h1>F.A.Q.'s</h1>
-<p>Under construction.</p>
+<% @fronts.each do |front| %>
+<%= front.faq.html_safe %>
+<% end %>
 </div>

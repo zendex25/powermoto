@@ -8,8 +8,8 @@ class StoreController < ApplicationController
   
   def index
   	@fronts = Front.all
-
   end
+
 
   def tire
     @products = Product.where(:category => 'Tire')
@@ -40,14 +40,21 @@ class StoreController < ApplicationController
   end
 
   def order
+    @fronts = Front.all
   end
 
   def faq
+    @fronts = Front.all
   end
 
   def shop
+    @fronts = Front.all
     @products = Product.order(:title)
 
+  end
+
+  def contact
+    @fronts = Front.all
   end
 
 end

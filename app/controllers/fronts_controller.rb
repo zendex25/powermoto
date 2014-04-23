@@ -69,6 +69,6 @@ class FrontsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def front_params
-      params.require(:front).permit(:img1, :img2, :img3, :about, :company, :services, :dealer)
+      params.require(:front).permit(:img1, :img2, :img3, :about, :company, :services, :dealer, :img4, :img5, :img6, :img7, :img8, :img9, :img10, :faq, :shop, :how, :contact, :store_loc)
     end
 end
