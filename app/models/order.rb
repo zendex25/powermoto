@@ -5,7 +5,7 @@ class Order < ActiveRecord::Base
 	PAYMENT_TYPES = ["Purchase Order"]
 
 	validates :name, :address, :email, :contact, presence: true
-	validates :contact, :numericality => true
+	validates :contact, format: { with: /\d{3}-\d{3}-\d{4}/ }
 	validates :pay_type, inclusion: PAYMENT_TYPES
 
 	def add_line_items_from_cart(cart)

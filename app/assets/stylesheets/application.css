@@ -826,7 +826,7 @@ border-top: 1px solid #595;
 }
 
 .depot_form form label {
-  width: 5em;
+  
   
   padding-top: 0.2em;
   margin-right: 0.1em;
@@ -871,6 +871,7 @@ border-top: 1px solid #595;
 
 .item img {
   width: 940px;
+  height: 540px;
 }
 
 .front {
