@@ -890,6 +890,7 @@ border-top: 1px solid #595;
 
 .store .entry img {
   width: 240px;
+  height: 240px;
   margin-right: 5px;
   margin-bottom: 5px;
   position: absolute;
