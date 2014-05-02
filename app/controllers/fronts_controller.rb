@@ -10,6 +10,7 @@ class FrontsController < ApplicationController
   # GET /fronts/1
   # GET /fronts/1.json
   def show
+    @fronts = Front.all
   end
 
   # GET /fronts/new
@@ -19,6 +20,7 @@ class FrontsController < ApplicationController
 
   # GET /fronts/1/edit
   def edit
+    @fronts = Front.all
   end
 
   # POST /fronts

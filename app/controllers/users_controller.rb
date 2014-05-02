@@ -5,25 +5,30 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     @users = User.order(:name)
+    @fronts = Front.all
   end
 
   # GET /users/1
   # GET /users/1.json
   def show
+    @fronts = Front.all
   end
 
   # GET /users/new
   def new
     @user = User.new
+    @fronts = Front.all
   end
 
   # GET /users/1/edit
   def edit
+    @fronts = Front.all
   end
 
   # POST /users
   # POST /users.json
   def create
+    @fronts = Front.all
     @user = User.new(user_params)
 
     respond_to do |format|

@@ -1,60 +1,42 @@
-<% if notice %>
-<p id="notice"><%= notice %></p>
+<% @fronts.each do |front| %>
+  <div id="owl-demo" class="owl-carousel owl-theme  margin-bottom">
+    <div class="item"><%= image_tag(front.img1) %></div>
+    <div class="item"><%= image_tag(front.img2) %></div>
+    <div class="item"><%= image_tag(front.img3) %></div>
+    <div class="item"><%= image_tag(front.img4) %></div>
+    <div class="item"><%= image_tag(front.img5) %></div>
+    <div class="item"><%= image_tag(front.img6) %></div>
+    <div class="item"><%= image_tag(front.img7) %></div>
+    <div class="item"><%= image_tag(front.img8) %></div>
+    <div class="item"><%= image_tag(front.img9) %></div>
+    <div class="item"><%= image_tag(front.img10) %></div>
+  </div> 
+<div class="header">
+      <ul>
+        <li>
+          <div align="justify" style="margin-left: 41px">
+            <h1>About Us</h1>
+            <%= front.about.html_safe %>
+          </div>
+        </li>
+
+        <li>
+          <div align="justify" style="margin-left: 41px">
+            <h1>Company</h1>
+            <%= front.company.html_safe %>
+            <h2>Like Us on FB!</h2>
+    <p><a href="https://www.facebook.com/pages/Powermoto-Motorshop/201230659904144" target="_blank"><img src="../images/facebook.jpg" width="250px"></a></p>
+
+          </div>
+        </li>
+
+        <li>
+          <div align="justify" style="margin-left: 41px">
+            <h1>Services</h1>
+            <%= front.services.html_safe %>
+          </div>
+        </li>
+      </ul>
+    </div>
+
 <% end %>
-
-      <% @fronts.each do |front| %>
-      <div class="line">
-        <div id="owl-demo" class="owl-carousel owl-theme  margin-bottom">
-          <div class="item"><%= image_tag(front.img1) %></div>
-          <div class="item"><%= image_tag(front.img2) %></div>
-          <div class="item"><%= image_tag(front.img3) %></div>
-          <div class="item"><%= image_tag(front.img4) %></div>
-          <div class="item"><%= image_tag(front.img5) %></div>
-          <div class="item"><%= image_tag(front.img6) %></div>
-          <div class="item"><%= image_tag(front.img7) %></div>
-          <div class="item"><%= image_tag(front.img8) %></div>
-          <div class="item"><%= image_tag(front.img9) %></div>
-          <div class="item"><%= image_tag(front.img10) %></div>
-        </div> 
-      </div>
-      
-      <div class="line">
-        <div class="margin">
-          <div class="s-12 l-4 margin-bottom">
-            <div class="front">
-              <h2>About</h2>
-              <%= front.about.html_safe %>
-            </div>
-          </div>
-          <div class="s-12 l-4 margin-bottom">
-            <div class="front">
-              <h2>Company</h2>
-              <%= front.company.html_safe %>
-              <br>
-              <h2>Like Us on FB!</h2>
-              <p>  <a href="https://www.facebook.com/pages/Powermoto-Motorshop/201230659904144" target="_blank"><img src="../img/facebook.jpg" width="250px"></a></p>
-            </div>
-          </div>
-          <div class="s-12 l-4 margin-bottom">
-            <div class="front">
-              <h2>Services</h2>
-              <%= front.services.html_safe %>
-            </div>
-
-          </div>
-          <%= front.bottom.html_safe %>
-        </div> 
-    
-      </div>
-
-      
-
-      <div class="line">
-        <div class="margin">
-          <div class="dealer">
-
-            <center><%= image_tag(front.dealer) %></center>
-          </div>
-        </div>
-      </div>
-      <% end %>

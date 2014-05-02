@@ -15,26 +15,31 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
+    @fronts = Front.all
     @products = Product.all
   end
 
   # GET /products/1
   # GET /products/1.json
   def show
+    @fronts = Front.all
   end
 
   # GET /products/new
   def new
     @product = Product.new
+    @fronts = Front.all
   end
 
   # GET /products/1/edit
   def edit
+    @fronts = Front.all
   end
 
   # POST /products
   # POST /products.json
   def create
+    @fronts = Front.all
     @product = Product.new(product_params)
 
     respond_to do |format|

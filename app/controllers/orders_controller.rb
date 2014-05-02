@@ -9,25 +9,29 @@ class OrdersController < ApplicationController
   # GET /orders.json
   def index
     @orders = Order.all
+    @fronts = Front.all
   end
 
   # GET /orders/1
   # GET /orders/1.json
   def show
+    @fronts = Front.all
   end
 
   # GET /orders/new
   def new
+    @fronts = Front.all
     if @cart.line_items.empty?
       redirect_to shop_store_url, notice: "Your cart is empty"
       return
     end
-
+@fronts = Front.all
     @order = Order.new
   end
 
   # GET /orders/1/edit
   def edit
+    @fronts = Front.all
   end
 
   # POST /orders

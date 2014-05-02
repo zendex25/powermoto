@@ -1,18 +1,19 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<!-- Website Template by freewebsitetemplates.com -->
 <html>
 <head>
+  <meta charset="UTF-8">
   <title>Powermoto</title>
-    <%= stylesheet_link_tag "application", media: "all", 
- 	"data-turbolinks-track" => true %>
+
+  <%= stylesheet_link_tag "application", media: "all", 
+  "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 
-    <link rel="stylesheet" href="../css/components.css">
-  <link rel="stylesheet" href="../css/responsee.css">  
-  <link rel="stylesheet" href="../owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="../owl-carousel/owl.carousel.css">
   <link rel="stylesheet" href="../owl-carousel/owl.theme.css">
 
-  <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
   <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>  
   <script type="text/javascript" src="../js/modernizr.js"></script>
   <script type="text/javascript" src="../js/responsee.js"></script>
@@ -61,87 +62,90 @@
 
 
   </script>
-
-   <!--[if lt IE 9]>
-  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <!--[if lt IE 9]>
+    <link rel="stylesheet" type="text/css" href="css/ie.css">
   <![endif]-->
-
 </head>
-<body class="size-960">
+<body>
+  <div id="header">
+    <div>
+      <a href="/" class="logo"><img src="images/logo.png" alt=""></a>
+    </div>
+    <div class="navigation">
+      <ul>
+        <li><a href="/">home</a></li>
+        <li><a href="/faq">faq</a></li>
+        <li><a href="/shop">shop</a>
+          <ul>
+            <li><a href="/tire">Tire</a></li>
+            <li><a href="/helmet">Helmet</a></li>
+            <li><a href="/part">Part</a></li>
+            <li><a href="/accessory">Accessory</a></li>
+            <li><a href="/battery">Battery</a></li>
+            <li><a href="/oillube">Oil/Lube</a></li>
+            <li><a href="/other">Other</a></li>
+          </ul>
+        </li>
+        <li><a href="/order">How to Order</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+        <li> <a href="https://www.facebook.com/pages/Powermoto-Motorshop/201230659904144" target="_blank"><img src="../images/like.png"></a></li>
+      </ul>
 
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+    </div>
+    <% if session[:user_id] %>
+    <div class="navigation">
+      <ul>
+        <li><%= link_to 'Admin', admin_path %></li>
+        <li><%= link_to 'Orders', orders_path %></li>
+        <li><%= link_to 'Products', products_path %></li>
+        
+        <li><%= link_to 'Edit Homepage', fronts_path %>
+        <li><%= link_to 'Logout', logout_path, method: :delete %></li>
+      </ul>
+    </div>
+    <% end %>
+  </div>
+  <div id="body">
 
-<header>
-      <div class="line">
-        <div class="box">
-          
-            <img src="../img/bike.png"><img src="../img/samplelogo.png">
-          
-        </div>
+<% if notice %>
+    <div class="header" style="padding:15px">
+
+<p id="notice"><%= notice %></p>
+</div>
+<% end %>
+
+      <div class="header" style="padding:15px">
+    <%= yield %>
+     </div>
+    <div class="footer">
+      <div>
+        <% @fronts.each do |front| %>
+<%= front.bottom.html_safe %>
+
       </div>
-      <!-- TOP NAV -->  
-      <div class="line">
-        <nav class="margin-bottom">
-          <p class="nav-text">Custom menu text</p> 
-          <div class="top-nav s-12 l-10">
-            <ul>
-              <li><a href="/">Home</a></li>
-			       <li><a href="/faq">FAQ</a>               
-              </li>
-              <li><a href="/shop">Shop</a>
-                <ul>
-                      <li><a href="/tire">Tire</a></li>
-                      <li><a href="/helmet">Helmet</a></li>
-                      <li><a href="/part">Part</a></li>
-                      <li><a href="/accessory">Accessory</a></li>
-                      <li><a href="/battery">Battery</a></li>
-                      <li><a href="/oillube">Oil/Lube</a></li>
-                      <li><a href="/other">Other</a></li>
-                    </ul>
-              </li>
-			        <li><a href="/order">How to Order</a></li>
-              <li><a href="/contact">Contact Us</a></li>
-            </ul>
+    </div>
+  </div>
+  <div id="footer">
+    <div>
+      <center><%= image_tag(front.dealer) %></center>
+      <% end %>
+    </div>
+    <div class="section">
+      <p>
+        &copy; Dexter E. Ancheta, All rights reserved.
+      </p>
+      <ul>
+        <li><a href="/">home</a></li>
+        <li><a href="/faq">faq</a></li>
+        <li><a href="/shop">shop</a>
 
-
-
-            </div>
-            <div class=" hide-s l-2">
-              <br>
-            <a href="https://www.facebook.com/pages/Powermoto-Motorshop/201230659904144" target="_blank"><img src="../img/like.png"></a>
-          </div>
-
-            <% if session[:user_id] %>
-            <div class="top-nav s-12 l-10">
-            <ul>
-              <li><%= link_to 'Admin', admin_path %></li>
-              <li><%= link_to 'Orders', orders_path %></li>
-              <li><%= link_to 'Products', products_path %></li>
-              <li><%= link_to 'Users', users_path %></li>
-              <li><%= link_to 'Edit Homepage', fronts_path %>
-              <li><%= link_to 'Logout', logout_path, method: :delete %></li>
-            </ul>
-            
-            <% end %>
-
-          </div>
-          
-        </nav>
-      </div>
-    </header> 
-
-
-
-	<div class="line">
-	  <%= yield %>
-	</div>
+        </li>
+        <li><a href="/order">How to Order</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+        <li> <a href="https://www.facebook.com/pages/Powermoto-Motorshop/201230659904144" target="_blank"><img src="../images/like.png"></a></li>
+        
+      </ul>
+    </div>
   </div>
 </body>
 </html>
