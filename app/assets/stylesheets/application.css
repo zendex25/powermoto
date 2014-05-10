@@ -6,7 +6,7 @@
 }
 
 @font-face {
-  font-family: 'mfg';
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   src: url('../font/mfglabsiconset-webfont.eot');
   src: url('../font/mfglabsiconset-webfont.eot?#iefix') format('embedded-opentype'),
   url('../font/mfglabsiconset-webfont.woff') format('woff'),
@@ -49,7 +49,7 @@
 }
 body {
   background: url(../images/bg-body2.jpg) repeat-x fixed;
-  font-family: 'mfg';
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   font-size: 100%;
   font-weight: normal;
   line-height: 1;
@@ -140,7 +140,7 @@ body {
 #header .navigation > ul > li > a {
   color: #fff;
   display: block;
-  font-family: 'mfg';
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   font-size: 14px;
   font-weight: normal;
   height: 52px;
@@ -191,7 +191,7 @@ body {
   color: #000;
   display: block;
   height: 23px;
-  font-family: 'mfg';
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   font-size: 13px;
   font-weight: normal;
   line-height: 23px;
@@ -251,7 +251,7 @@ body {
 }
 #body .header ul li div h3 {
   color: #7a7a7a;
-  font-family: 'mfg';
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   font-size: 18px;
   font-weight: normal;
   margin: 0;
@@ -267,7 +267,7 @@ body {
 }
 #body .header ul li div p {
   
-  font-family: 'mfg';
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   font-size: 100%;
   
   
@@ -305,7 +305,7 @@ body {
 }
 #body .body div h1 {
   color: #7a7a7a;
-  font-family: 'mfg';
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   font-size: 62px;
   font-weight: normal;
   line-height: 60px;
@@ -322,7 +322,7 @@ body {
 }
 #body .body div p {
   color: #7a7a7a;
-  font-family: 'mfg';
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   font-size: 13px;
   font-weight: normal;
   margin: 0;
@@ -341,7 +341,7 @@ body {
   background: url(../images/interface.png) no-repeat 0 -530px;
   color: #fff;
   display: block;
-  font-family: 'mfg';
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   font-size: 24px;
   font-weight: normal;
   height: 50px;
@@ -372,7 +372,7 @@ body {
 #body .footer div h2 {
   background: url(../images/border.png) repeat-x 0 12px;
   color: #7a7a7a;
-  font-family: 'mfg';
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   font-size: 21px;
   font-weight: normal;
   margin: 0;
@@ -422,7 +422,7 @@ body {
 }
 #body .footer div ul li div h3 {
   color: #7a7a7a;
-  font-family: 'mfg';
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   font-size: 18px;
   font-weight: normal;
   margin: 0 0 18px 10px;
@@ -438,7 +438,7 @@ body {
 }
 #body .footer div ul li div p {
   color: #7a7a7a;
-  font-family: 'mfg';
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   font-size: 13px;
   font-weight: normal;
   line-height: 24px;
@@ -528,7 +528,7 @@ body {
 }
 #body .content .section div h2 {
   color: #7a7a7a;
-  font-family: 'mfg';
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   font-size: 21px;
   font-weight: normal;
   margin: 0;
@@ -554,7 +554,7 @@ body {
 }
 #body .content .section div h3 {
   color: #7a7a7a;
-  font-family: 'mfg';
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   font-size: 18px;
   font-weight: normal;
   line-height: 24px;
@@ -610,7 +610,7 @@ body {
 #body .content .section .team span {
   color: #7a7a7a;
   display: block;
-  font-family: 'mfg';
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   font-size: 13px;
   font-weight: normal;
   margin: 0;
