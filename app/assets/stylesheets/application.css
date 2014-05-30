@@ -48,7 +48,8 @@
   font-style: normal;
 }
 body {
-  background: url(../images/bg-body2.jpg) repeat-x fixed;
+  background: url(../images/wallpaper.jpg) repeat-x fixed;
+  background-size: 100%;
   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   font-size: 100%;
   font-weight: normal;
